@@ -1,0 +1,159 @@
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+:root {
+  --main :#17a095;
+  --white : #eee;
+}
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+header {
+  color: var(--white);
+  background-color: var(--main);
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  font-size: 0.9em;
+}
+
+main {
+  padding: 1rem;
+  background-color: var(--white);
+}
+.introduction {
+  flex-basis: 70%;
+}
+.information-list {
+  list-style-type: none;
+  border-left: 2px solid var(--white);
+}
+.general-information > h2 {
+  display: none;
+}
+.information-list > li > p,
+.information-list h3,
+.language-item > h3,
+.language-item > p  {
+  margin: 0;
+	padding: 0;
+}
+
+.language-item > h3 {
+  min-width: 60px;
+}
+.experiences-item {
+  display: flex;
+  gap: 1rem;
+}
+.experience-details {
+  flex-basis: 80%;
+  border-left: 0.1rem solid black;
+}
+.experience-wrap{
+  margin-left: 2rem;
+}
+.experience-wrap > h3 {
+  margin-top: 0;
+}
+.date {
+  flex-basis: 20%;
+}
+.date > p {
+  margin-top: 0;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 120px;
+    
+}
+
+.skills .languages,
+.skills .technologies,
+.skills .tools {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.skills > .languages > li,
+.skills > .technologies > li,
+.skills > .tools > li {
+  color: var(--white);
+  background-color: var(--main);
+  padding: 0.5rem;
+}
+
+.section-skills, .section-languages {
+  flex-basis: 50%;
+}
+
+.language-list {
+  list-style-type: none;
+}
+.language-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.education-item {
+  list-style-type: none;
+  display: flex;
+}
+
+.education-item > div :first-child {
+  margin-top: 0;
+}
+@media screen and (min-width:800px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section-experiences,
+  .section-educations {
+    flex-basis: 100%;
+  }
+
+  .section-skills,
+  .section-languages {
+    flex-basis: 40%;
+  }
+
+  .section-languages {
+    margin-left: 2rem;
+  }
+}
+
+@media print {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section-experiences,
+  .section-educations {
+    flex-basis: 100%;
+  }
+
+  .section-skills,
+  .section-languages {
+    flex-basis: 20%;
+  }
+
+  .section-languages {
+    margin-left: 1rem;
+  }
+}
