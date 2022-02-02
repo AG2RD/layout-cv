@@ -10,103 +10,135 @@ html {
      --white : #eee;
 }
  body {
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     max-width: 1200px;
-     margin: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 1200px;
+    margin: auto;
 }
  header {
-     color: var(--white);
-     background-color: var(--main);
+    color: var(--white);
+    background-color: #17a095;
+    opacity: 1;
+    background-image:  linear-gradient(135deg, #129d91 25%, transparent 25%), linear-gradient(225deg, #129d91 25%, transparent 25%), linear-gradient(45deg, #129d91 25%, transparent 25%), linear-gradient(315deg, #129d91 25%, #17a095 25%);
+    background-position:  10px 0, 10px 0, 0 0, 0 0;
+    background-size: 10px 10px;
+    background-repeat: repeat;
     /* display: flex;
      gap: 1rem;
-     */
-     padding: 1rem 2rem;
-     font-size: 0.9em;
+    */
+    padding: 1rem 2rem;
+    font-size: 0.9em;
 }
  main {
-     padding: 1rem;
-     background-color: var(--white);
+    padding: 1rem;
+    background-color: var(--white);
 }
  .introduction {
-     flex-basis: 70%;
+    flex-basis: 70%;
+}
+ .information > h2 {
+    display: none;
 }
  .information-list {
-     list-style-type: none;
-     padding-left: 0;
-     padding-top: 1rem;
-     border-top: 2px solid var(--white);
+    list-style-type: none;
+    padding-left: 0;
+    padding-top: 1rem;
+    border-top: 2px solid var(--white);
 }
- .general-information > h2 {
-     display: none;
-}
- .information-list > li > p, .information-list h3, .language-item > h3, .language-item > p {
-     margin: 0;
-     padding: 0;
+ .information-list > li > p,
+ .information-list h3,
+ .language-item > h3,
+ .language-item > p,
+ .experiences-item h3 {
+    margin: 0;
+    padding: 0;
 }
  .language-item > h3 {
-     flex-basis: 100px;
+    flex-basis: 100px;
 }
  .experiences-item {
-     display: flex;
-     gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
- .experience-details, .education-details {
-     flex-basis: 80%;
-     border-left: 0.1rem solid black;
+
+.experiences-item > .date > h3{
+    margin-top: 25%;
 }
- .experience-wrap, .education-wrap{
-     margin-left: 2rem;
+
+ .experience-details,
+ .education-details {
+    flex-basis: 80%;
+    border-left: 0.1rem solid black;
 }
- .experience-wrap > h3 {
-     margin-top: 0;
+
+.dashed {
+    border-left: 0.1rem dashed var(--main);
 }
- .experience-wrap > h3::before {
-     margin-top: 0;
+ .experience-wrap,
+ .education-wrap{
+    margin-left: 2rem;
+}
+ .experience-wrap > h3,
+ .education-wrap > h3 {
+    margin-top: 0;
+    position: relative;
+}
+ .experience-wrap > h3::before,
+ .education-wrap > h3::before {
+    display: inline-block;
+    position: absolute;
+    content:"";
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--main);
+    border-radius: 50%;
+    transform: translate(-41px, 0px);
 }
  .altissia-roles {
      margin-bottom: 1rem;
 }
  .date {
-     flex-basis: 20%;
+    flex-basis: 20%;
+    min-width: 6rem;
 }
  .date > p {
-     margin-top: 0;
+    margin-top: 0;
 }
  .skills {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
-     min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 120px;
 }
  .skill-languages, .skill-technologies, .skill-tools {
-     list-style-type: none;
-     margin-bottom: 1rem;
-     padding-left: 0;
+    list-style-type: none;
+    margin-bottom: 1rem;
+    padding-left: 0;
 }
  .skill-languages > li, .skill-technologies > li, .skill-tools > li {
-     color: var(--white);
-     background-color: var(--main);
-     padding: 0.5rem;
-     max-width: 200px;
-     border-radius: 8px;
-     text-align: center;
-     margin: 0 auto;
-     margin-bottom: 0.2rem;
+    color: var(--white);
+    background-color: var(--main);
+    padding: 0.5rem;
+    max-width: 200px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 0.2rem;
 }
  .language-list {
-     list-style-type: none;
+    list-style-type: none;
 }
  .language-item {
-     display: flex;
-     align-items: center;
-     gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
  .education-item {
-     list-style-type: none;
-     display: flex;
+    list-style-type: none;
+    display: flex;
 }
  .education-item > div :first-child {
-     margin-top: 0;
+    margin-top: 0;
 }
 
 @media screen and (min-width:800px) {
