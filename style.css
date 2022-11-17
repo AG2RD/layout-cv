@@ -177,7 +177,7 @@ html {
      main {
          display: flex;
          flex-wrap: wrap;
-         gap: 1rem;
+         
     }
      .skill-languages, 
      .skill-technologies, 
@@ -254,8 +254,7 @@ html {
       justify-content: center;
     }
   
-
-     .experience-wrap > h3::before,
+    .experience-wrap > h3::before,
     .education-wrap > h3::before {
         transform: translate(-26px, -1px);
     }
